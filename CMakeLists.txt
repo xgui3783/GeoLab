@@ -15,8 +15,9 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 # Configure a header file to pass the version number to the source code
 configure_file(ProjectAtlasConfig.h.in ProjectAtlasConfig.h)
 
-# Set PYTHON_BINARY
-set(PYTHON_BINARY "/usr/bin/env python3")
+# Set PYTHON_BINARY (interpreter substituted into the `#!${PYTHON_BINARY}` script shebangs).
+# Override with -DPYTHON_BINARY=/path/to/python for a virtualenv or non-default location.
+set(PYTHON_BINARY "/usr/bin/env python3" CACHE STRING "Interpreter used in script shebangs")
 
 
 

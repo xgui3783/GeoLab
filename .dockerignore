@@ -1,0 +1,7 @@
+# Keep the build context small and avoid copying host-specific / heavy artifacts.
+build/
+venv/
+.git/
+Atlas/
+TrainedSupWMA/
+*.log
