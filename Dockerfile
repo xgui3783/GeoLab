@@ -22,6 +22,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         cmake \
         libboost-all-dev \
         libeigen3-dev \
+        libncurses-dev \
     && rm -rf /var/lib/apt/lists/*
 
 COPY . /src
